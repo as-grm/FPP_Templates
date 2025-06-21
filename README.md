@@ -23,7 +23,7 @@ ki je preveden tudi v slovenščino [https://users.fmf.uni-lj.si/plestenjak/vaje
 
 Poleg navedenega priročnika je zelo uporabna stran dokumentacije v OverLeaf okolju [https://www.overleaf.com/learn](https://www.overleaf.com/learn), kjer imate popolnoma vse, kar potrebujete za delo v LaTeX okolju.
 
-Pri prvih korakih v latex, si lahko pogledate z uporabo latex primera, kot so napisana navodila za latex ```navodila_latex.tex```, ki se nahajajo v mapi ```users_guide```. Tukaj se nahajajo osnovni koraki, ki jih potrebujete. Za naprednješo obdelavo teksta pa uporabite zgornjo dokumentacijo.
+Pri prvih korakih v latex, si lahko pogledate z uporabo latex primera, kot so napisana navodila za latex ```navodila_latex.tex```, ki se nahajajo v mapi ```users_guide```. Tukaj se nahajajo osnovni koraki, ki jih potrebujete. Za naprednješo obdelavo teksta pa uporabite zgornjo dokumentacijo in pa ostale reference, ki se nahajajo v [https://github.com/as-grm/FPP_Templates/tree/main/user_guide](navodilih za latex).
 
 V primeru, če vam kaj ne dela prav in ne veste kje je napaka, vam bo zelo pomagal **ChatGPT**. Del kode, ki mislite da je napačen, preprosto skopirate v CGPT in ga vprašate, če vam pomaga poiskat napako. *Garantirano deluje 100\%*!
 
