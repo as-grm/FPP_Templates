@@ -16,7 +16,8 @@ Repozitorij vsebuje LaTeX predloge za izdelavo zaključnega dela in poročila. P
 
 Vaša delo je urejanje ```main.tex``` in ```literature.bib``` datoteke. Poleg morate vnesti slike v mapo ```figs``` in dodati še poskeniran sklep *Komisije za študijske zadeve*.
 
-Veliko se o LaTeX naučite iz priročnika **The not so Short Introduction to LaTeX**, ki je dostopen v različnih formatih na naslovu [https://ctan.org/tex-archive/info/lshort/english](https://ctan.org/tex-archive/info/lshort/english).
+Veliko se o LaTeX naučite iz priročnika **The not so Short Introduction to LaTeX**, ki je dostopen v različnih formatih na naslovu [https://ctan.org/tex-archive/info/lshort/english](https://ctan.org/tex-archive/info/lshort/english),
+ki je preveden tudi v slovenščino [https://users.fmf.uni-lj.si/plestenjak/vaje/latex/lshort.pdf](https://users.fmf.uni-lj.si/plestenjak/vaje/latex/lshort.pdf).
 
 Poleg navedenega priročnika je zelo uporabna stran dokumentacije v OverLeaf okolju [https://www.overleaf.com/learn](https://www.overleaf.com/learn), kjer imate popolnoma vse, kar potrebujete za delo v LaTeX okolju.
 
