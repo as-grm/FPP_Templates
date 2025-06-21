@@ -23,6 +23,8 @@ ki je preveden tudi v slovenščino [https://users.fmf.uni-lj.si/plestenjak/vaje
 
 Poleg navedenega priročnika je zelo uporabna stran dokumentacije v OverLeaf okolju [https://www.overleaf.com/learn](https://www.overleaf.com/learn), kjer imate popolnoma vse, kar potrebujete za delo v LaTeX okolju.
 
+Pri prvvih korakih v latex, si lahko pogledate kako se upoablja latex na primeru, kot so napisana navodila za latex ```navodila_latex.tex```, ki se nahajajo v mapi ```users_guide```.
+
 
 <hr>
 
