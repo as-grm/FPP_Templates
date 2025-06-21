@@ -34,8 +34,8 @@ V datoteki ```literatura.bib``` imate lahko bistveno več vpisane literature, ko
 
 Postopek prevajanja LaTeX dokumenta je:
  1. ```pdflatex``` poženem vsaj 2x
- 2. ```bibtex``` poženem prvič in naot, ko dodam kakšen nov vnos v ```literatura.bib```
- 3. ```pdflatex``` poženem še na zadnje in dobim dokument z vso izpisano literaturo.
+ 2. ```bibtex``` poženem prvič in nato, ko dodam kakšen nov vnos v ```literatura.bib```
+ 3. ```pdflatex``` poženem še na zadnje in dobim ```main.pdf``` dokument z vso izpisano literaturo in ustreznimi referencami v dokumentu.
 
 
 <hr>
