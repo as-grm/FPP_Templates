@@ -23,6 +23,21 @@ ki je preveden tudi v slovenščino [https://users.fmf.uni-lj.si/plestenjak/vaje
 
 Poleg navedenega priročnika je zelo uporabna stran dokumentacije v OverLeaf okolju [https://www.overleaf.com/learn](https://www.overleaf.com/learn), kjer imate popolnoma vse, kar potrebujete za delo v LaTeX okolju.
 
+
+<hr>
+
+**Prevajanje dokumenta**
+
+LaTeX dokument ```main.tex``` vedno prevajamo z uporabo ```pdflatex``` ukaza, ker je predloga narejena samo za ta prevajalnik. Da si zgradite ustrezno bibliografijo je potrebno uporabiti še ukaz ```bibtex```, ki iz datoteke ```literatura.bib``` naredi datoteko ```main.bbl```, ki vsebuje izpis literature v predpisanem formatu.
+
+V datoteki ```literatura.bib``` imate lahko bistveno več vpisane literature, kot jo pa potrebujete v nalogi. Prevajalni ```pdflatex``` sam nato izbere tisto kar potrebuje.
+
+Postopek prevajanja LaTeX dokumenta je:
+ 1. ```pdflatex``` poženem vsaj 2x
+ 2. ```bibtex``` poženem prvič in naot, ko dodam kakšen nov vnos v ```literatura.bib```
+ 3. ```pdflatex``` poženem še na zadnje in dobim dokument z vso izpisano literaturo.
+
+
 <hr>
 
 **Pomembno**
