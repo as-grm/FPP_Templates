@@ -14,6 +14,8 @@ Repozitorij vsebuje LaTeX predloge za izdelavo zaključnega dela in poročila. P
  - ```literatura.bib```: datoteka vsebuje literaturo, ki jo citirate v nalogi
  - mapa ```figs```: sem shranjujete slike, ki jih imate v nalogi. mapa je narejen zato, da se ne mešajo datoteke
 
+Iz ```github``` repozitorija si povlečite dol trenutno kopijo (klikni desno gumbek ```<> Code```) in izberi ```Download ZIP```. Ustrezne datoteke in mapo si skopiraj v svoj ```OverLeaf``` projekt.
+
 Vaša delo je urejanje ```main.tex``` in ```literature.bib``` datoteke. Poleg morate vnesti slike v mapo ```figs``` in dodati še poskeniran sklep *Komisije za študijske zadeve*.
 
 Veliko se o LaTeX naučite iz priročnika **The not so Short Introduction to LaTeX**, ki je dostopen v različnih formatih na naslovu [https://ctan.org/tex-archive/info/lshort/english](https://ctan.org/tex-archive/info/lshort/english),
