@@ -1,11 +1,11 @@
 # FPP LaTeX Templates
 
-Repozitorij vsebuje LaTeX predsloge za izdelavo zaključnega dela in poročila. Predloge se nahajajo v ločenih mapah
+Repozitorij vsebuje LaTeX predloge za izdelavo zaključnega dela in poročila. Predloge se nahajajo v ločenih mapah
 
- - **thesis**: predloga za izdelavo zaključnega dela (diplomska/magistrska naloga)
- - **report***: predloga za izdelavo poročila
+ - ```thesis```: predloga za izdelavo zaključnega dela (diplomska/magistrska naloga)
+ - ```report```: predloga za izdelavo poročila
 
- Poleg je še dodatna mapa **user_guide**, ki vsebuje osnovna navodila za pisanje v LaTeXu.
+ Poleg je dodatna še mapa ```user_guide```, ki vsebuje osnovna navodila za pisanje v LaTeXu.
 
  Vsaka predloga vsebuje tri datoteke in eno mapo:
 
@@ -19,3 +19,11 @@ Vaša delo je urejanje ```main.tex``` in ```literature.bib``` datoteke. Poleg mo
 Veliko se o LaTeX naučite iz priročnika **The not so Short Introduction to LaTeX**, ki je dostopen v različnih formatih na naslovu [https://ctan.org/tex-archive/info/lshort/english](https://ctan.org/tex-archive/info/lshort/english).
 
 Poleg navedenega priročnika je zelo uporabna stran dokumentacije v OverLeaf okolju [https://www.overleaf.com/learn](https://www.overleaf.com/learn), kjer imate popolnoma vse, kar potrebujete za delo v LaTeX okolju.
+
+<hr>
+
+**Pomembno**
+
+Vedno pričnete najprej z izbiro ```programa/smeri```, kjer imate šest možnosti. Nato pa nadaljujete z vpisaovanjem vaših podatkov v sekcijo ```METADATA```, ki je nad ```\begin{document}```.
+
+Če želite imeti verzijo naloge za online objavo, morate izbrisati ključ ```tisk``` v določitvi ```\documentclass```!
