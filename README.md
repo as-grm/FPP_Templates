@@ -10,7 +10,7 @@ Repozitorij vsebuje LaTeX predloge za izdelavo zaključnega dela in poročila. P
  Vsaka predloga vsebuje tri datoteke in eno mapo:
 
  - ```main.tex```: to datoteko urejeujete, kamor se vnašajo vsebine vašega zaključnega dela;
- - ```fppthesis.cls```: tole je osnovi gradnik, ki izdela celotno formo vaše naloge;
+ - ```fppthesis.cls``` ali ```fppreport.cls```: tole je osnovi gradnik, ki izdela celotno formo vaše naloge ali poročila;
  - ```literatura.bib```: datoteka vsebuje literaturo, ki jo citirate v nalogi
  - mapa ```figs```: sem shranjujete slike, ki jih imate v nalogi. mapa je narejen zato, da se ne mešajo datoteke
 
