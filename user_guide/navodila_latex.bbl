@@ -1,0 +1,56 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Angelini et~al.(2011)Angelini, Frati, and Kaufmann]{vec-avtorjev}
+Patrizio Angelini, Fabrizio Frati, and Michael Kaufmann.
+\newblock Straight-line rectangular drawings of clustered graphs.
+\newblock \emph{Discrete Comput. Geom.}, 45\penalty0 (1):\penalty0 88--140,
+  January 2011.
+
+\bibitem[Cappell and Shaneson(1977)]{zbornik}
+Sylvain~E. Cappell and Julius~L. Shaneson.
+\newblock Singularities and immersions.
+\newblock \emph{Annals of Mathematics}, 105\penalty0 (3):\penalty0 539--552,
+  1977.
+
+\bibitem[Globevnik and Brojan(2010)]{glob}
+Josip Globevnik and Miha Brojan.
+\newblock \emph{Analiza 1}.
+\newblock Matematični rokopisi \textbf{25}. DMFA -- založništvo, Ljubljana,
+  2010.
+
+\bibitem[Kališnik and Mrčun(2004)]{kalisnik}
+J.~Kališnik and J.~Mrčun.
+\newblock \emph{Upodobitev orbiterosti: diplomsko delo : {Prešernova} nagrada
+  študentom}.
+\newblock J. Kališnik, 2004.
+\newblock URL \url{https://books.google.si/books?id=yhI8NQAACAAJ}.
+
+\bibitem[Lang(1999)]{lang}
+Serge Lang.
+\newblock \emph{Fundamentals of Differential Geometry}.
+\newblock Springer New York, 1999.
+
+\bibitem[Molland et~al.(2017)Molland, Turnock, and Hudson]{molland2017ship}
+A.F. Molland, S.R. Turnock, and D.A. Hudson.
+\newblock \emph{Ship resistance and propulsion}.
+\newblock Cambridge university press, 2017.
+
+\bibitem[W3Techs(2017)]{web:lang:stats}
+W3Techs.
+\newblock Usage statistics of content languages for websites, 2017.
+\newblock URL
+  \url{http://w3techs.com/technologies/overview/content_language/all}.
+\newblock Last accessed 16 September 2017.
+
+\bibitem[{Wikipedia contributors}(2022)]{wiki}
+{Wikipedia contributors}.
+\newblock Matrix (mathematics) --- {Wikipedia}{,} the free encyclopedia, 2022.
+\newblock URL
+  \url{https://en.wikipedia.org/w/index.php?title=Matrix_(mathematics)&oldid=1128559126}.
+
+\end{thebibliography}

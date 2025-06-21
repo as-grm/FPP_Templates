@@ -68,9 +68,17 @@
 \setmarginsrb{25mm}{15mm}{25mm}{15mm}{10mm}{10mm}{10mm}{15mm}
 
 
-%
-% *** include packages ***
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DODATNE DEFINICIJE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% naložite dodatne pakete, ki jih potrebujete
+\usepackage{algpseudocode}  % za psevdokodo
+\usepackage{algorithm}      % za algoritme
+\floatname{algorithm}{Algoritem}
+\renewcommand{\listalgorithmname}{Kazalo algoritmov}
+
+
 \usepackage[numbers]{natbib}
 \usepackage{parskip}
 \usepackage{graphicx}
@@ -110,8 +118,27 @@
 \usepackage{tikz}
 \usepackage{cancel}
 \usetikzlibrary{shadings}
+
+% deklarirajte vse matematične operatorje, da jih bo LaTeX pravilno stavil
+% \DeclareMathOperator{\conv}{conv}
+% na razpolago so naslednja matematična okolja, ki jih kličemo s parom
+% \begin{imeokolja}[morebitni komentar v oklepaju] ... \end{imeokolja}
+%
+% definicija, opomba, primer, zgled, lema, trditev, izrek, posledica, dokaz
+
+% za številske množice uporabite naslednje simbole
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+% Lahko se zgodi, da je ukaz \C definiral že paket hyperref,
+% zato dobite napako: Command \C already defined.
+% V tem primeru namesto ukaza \newcommand uporabite \renewcommand
+\newcommand{\C}{\mathbb C}
+\newcommand{\Q}{\mathbb Q}
+
 %
 % *** Matlab
+%
 \usepackage[framed,numbered]{matlab-prettifier}
 
 %
@@ -316,8 +343,12 @@ V primeru, ko zaključno delo pišete v \LaTeX okolju, se vam ni potrebno ukvarj
 
 Študentje si lahko o \LaTeX okolju veliko preberejo na naslednjih naslovih:
 
-\begin{itemize}[nosep]
-	\item \href{https://tug.ctan.org/info/lshort/english/lshort.pdf}{The Not So Short Introduction to \LaTeX 2$\varepsilon$} (klikni na tekst), ki je v pdf formatu,
+\begin{itemize}
+	\item Dobra navodila v angleščini so \textit{The Not So Short Introduction to \LaTeX 2$\varepsilon$}\\
+	\url{https://tug.ctan.org/info/lshort/english/lshort.pdf},
+	\item Slovenska verzija zgornjega dokumenta je na voljo na naslovu\\ \href{https://users.fmf.uni-lj.si/plestenjak/vaje/latex/lshort.pdf}{https://users.fmf.uni-lj.si/plestenjak/vaje/latex/lshort.pdf}\\
+	kjer imate še dodatna navodila na naslovu\\
+	\href{https://users.fmf.uni-lj.si/plestenjak/vaje/latex/latex.htm}{https://users.fmf.uni-lj.si/plestenjak/vaje/latex/latex.htm}
 	\item \textbf{OverLeaf} projekt z pomočjo na naslovu \url{https://www.overleaf.com/learn},
 	\item in še mnoga ostala literatura. 
 \end{itemize}
@@ -478,6 +509,49 @@ ali brez številke, če je enačba le pomožna kot del izpeljave
 \end{verbatim}
 
 Enačbe lahko enako kličemo po referenci, recimo Einštajn je zapisal nekaj zelo znanega v enačbi (\ref{eq:einstain}). V zgornjem primeru se je kot razmak med znaki uporabila kombinacija backslash in dvopičja (\texttt{\textbackslash :}).
+
+\subsubsection{Pisanje algoritmov}
+Za pisanje algoritmov sta na voljo okolji \texttt{algorithm} in \texttt{algorithmic} iz paketov \texttt{algorithm} in \texttt{algorithmix}, ki sodelujeta podobno kot \texttt{table} in \texttt{tabular}. Algoritmi plavajo med tekstom, enako kot slike in tabele, nanje se lahko tudi sklicujemo, kot prikazano v izvorni kodi in v algoritmu \ref{alg:metoda} (je na naslednji strani, ker se ga ne da prelomit). Sklicujemo se lahko tudi na pomembne vrstice, npr.\ na vrstico~\ref{alg:pomembna-vrstica}, ki predstavlja glavni del algoritma. Za primer pisanja algoritma se posvetujte s primerom v tem dokumentu, za bolj napredne primere uporabe, kot na primer razbijanje algoritma na več kosov, pa z (precej razumljivo) uradno dokumentacijo\footnote{\url{http://tug.ctan.org/macros/latex/contrib/algorithmicx/algorithmicx.pdf}}.
+
+Če želite vključiti izvorno kodo nekega programa, priporočamo paket \texttt{minted}\footnote{\url{https://github.com/gpoore/minted}}.
+
+\algnewcommand\algorithmicto{\textbf{to}}
+\algnewcommand\algorithmicin{\textbf{in}}
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algrenewtext{For}[3]{\algorithmicfor\ #1 $\gets$ #2\ \algorithmicto\ #3\ \algorithmicdo}
+\algdef{S}[FOR]{ForEach}[2]{\algorithmicforeach\ #1\ \algorithmicin\ #2\ \algorithmicdo}
+
+\begin{algorithm}[ht]
+	\caption{Opis, ki ima enako funkcionalnost kot opis pod sliko.}
+	\label{alg:metoda}
+	\raggedright
+	\textbf{Vhod:} Števili $n, m \in \N, n > m$. \\
+	\textbf{Izhod:} Decimalno število $x$, ki aproksimira rešitev enačbe $n x = m$.
+	\begin{algorithmic}[1]
+		\Function{reši}{$n$, $m$} \Comment{Vsi vhodni parametri morajo biti opisani.}
+		\State $a \gets [\,]$ \Comment{Spremenljivka $a$ naj postane prazna kopica.}
+		\For{$i$}{$1$}{$n$}
+		\If{$i \operatorname{mod} 7 = 5$}
+		\State \Call{heapop}{$a$}
+		\ElsIf{$i < 5$}
+		\State \Call{heappush}{$a, \frac{i+12}{7} + \pi$} \Comment{Lahko uporabljamo matematiko.}
+		\Else
+		\State \Call{heappush}{$a, i$}
+		\EndIf
+		\EndFor
+		\Statex  \Comment{Prazna vrstica}
+		\State $x \gets 0$  \Comment{To je primer komentarja.}
+		\ForEach{e}{a}
+		\State $x \gets 1 + \sqrt[e]{x}$
+		\EndFor
+		\While{$|x| > \varepsilon$}
+		\State $x \gets x / 2$
+		\EndWhile
+		\State $x \gets m / n$ \label{alg:pomembna-vrstica}
+		\State \Return $x$  \Comment{Vsi izhodni parametri morajo biti opisani nad algoritmom.}
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
 
 \subsubsection{Seznami}
 
