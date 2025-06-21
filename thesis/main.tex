@@ -1,0 +1,225 @@
+% **********************************************************************
+% Copyright 2025 ULFPP
+
+% Author: Dejan ŽAGAR, Aleksander GRM, Franc DIMC
+% Description: This is an official latex ULFPP thesis template.
+% Version: 1.0
+% Date: 20/06/2025
+% **********************************************************************
+
+\documentclass[pomnav, tisk]{fppthesis}
+%\documentclass[pomnav]{fppthesis}
+% Če pobrišete besedico tisk, bodo povezave obarvane,
+% na začetku pa ne bo praznih strani po naslovu, …
+%
+% Zamenjava za ustrezen program/smer
+%  - pomnav:   pomorstvo vsš, navtika, 1. stopnja
+%  - pomstr:   pomorstvo vsš, pomorsko strojništvo, 1. stopnja
+%  - pom2:     pomorstvo, 2. stopnja
+%  - promtpl:  promet uni, TPL, 1. stopnja
+%  - prompttl: promet vsš, PTTL, 1. stopnja
+%  - prom2:    promet, 2. stopnja
+%
+
+% **********************************************************************
+% !!! POMEMBNO: Predloga je narejena za prevajanje z pdflatex ukazom !!!
+% **********************************************************************
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DODATNI PAKETI in FUNKCIONALNOSTI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem} % oklje za naštevanje
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{amsmath,amsthm,amssymb,latexsym}
+\usepackage{datetime}
+\usepackage{fancyhdr}
+\usepackage{emptypage}
+\usepackage{siunitx}
+\usepackage{extarrows}% http://ctan.org/pkg/extarrows
+
+% okolja za lepe tabele
+\usepackage{booktabs} % fancy tables
+\usepackage[rgb]{xcolor}
+\selectcolormodel{natural}
+\usepackage{ninecolors}
+\selectcolormodel{rgb}
+\usepackage{tabularray}
+
+% okolje za citiranje: oglati oklepaji s številko
+\usepackage[sort, numbers]{natbib}
+
+%
+% *** Caption to be bold face ***
+%
+\usepackage{caption}
+\captionsetup[table]{labelfont=bf}
+\captionsetup[figure]{labelfont=bf}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DODATNE DEFINICIJE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% naložite dodatne pakete, ki jih potrebujete
+\usepackage{algpseudocode}  % za psevdokodo
+\usepackage{algorithm}      % za algoritme
+\floatname{algorithm}{Algoritem}
+\renewcommand{\listalgorithmname}{Kazalo algoritmov}
+
+% deklarirajte vse matematične operatorje, da jih bo LaTeX pravilno stavil
+% \DeclareMathOperator{\conv}{conv}
+% na razpolago so naslednja matematična okolja, ki jih kličemo s parom
+% \begin{imeokolja}[morebitni komentar v oklepaju] ... \end{imeokolja}
+%
+% definicija, opomba, primer, zgled, lema, trditev, izrek, posledica, dokaz
+
+% za številske množice uporabite naslednje simbole
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+% Lahko se zgodi, da je ukaz \C definiral že paket hyperref,
+% zato dobite napako: Command \C already defined.
+% V tem primeru namesto ukaza \newcommand uporabite \renewcommand
+\newcommand{\C}{\mathbb C}
+\newcommand{\Q}{\mathbb Q}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% METAPODATKI - obvezno izpolniti vse na novo z vašimo podatki
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% - vaše ime in priimek
+\avtor{Janez NOVAK}
+
+% - naslov dela v slovenščini
+\naslov{Preračun porabe goriva KRISO tipa kontejnerske ladje s pomočjo meritve upora modela}
+
+% - naslov dela v angleščini
+\title{Calculation of Consumption of KRISO type Container Ship using Model Resistance Measurement Method}
+
+% - ime mentorja/mentorice s polnim nazivom, prepiši z vsemi znaki, ki določajo ustrezen presledek.
+%   - doc.~dr.~Ime Priimek
+%   - izr.~prof.~dr.~Ime Priimek
+%   - prof.~dr.~Ime Priimek
+%   za druge variante uporabite ustrezne ukaze:
+%     - \mentor
+%     - \mentorja (če sta dva) {mentor 1}{mentor 2}
+%     - \somentor
+%     - \mentorica
+%     - \mentorici
+%     - \somentorica
+%
+\mentorica{izr.~prof.~dr.~Ime Priimek}
+\somentor{doc.~dr.~Ime Priimek}
+
+% - ime lektorja
+\lektor{Lektor Lara}
+
+% - vpisna številka študenta
+\stevilka{9210075}
+
+% - čas diplome
+\mesec{januar}
+\leto{2025} 
+
+% - povzetek v slovenščini
+%   V povzetku na kratko opišite vsebinske rezultate dela. Sem ne sodi razlaga
+%   organizacije dela, torej v katerem razdelku je kaj, pač pa le opis vsebine.
+\povzetek{V povzetku na kratko opišemo vsebinske rezultate dela. Sem ne sodi
+razlaga organizacije dela -- v katerem poglavju/razdelku je kaj, pač pa le opis
+vsebine.}
+
+% - povzetek v angleščini
+\abstract{Prevod slovenskega povzetka v angleščino.}
+
+% - ključne besede, ki nastopajo v delu, ločene z vejico
+\kljucnebesede{morska hidrodinamika, CFD, primerjava upora}
+
+% - angleški prevod ključnih besed
+\keywords{marin hydrodynamics, CDF, resistance comparison}
+
+% - ime datoteke, kjer je skeniran sklep KZŠZ
+\sklep{sklep_kzsz.pdf}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ZAČETEK VSEBINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% *********************
+% *** Novo poglavje ***
+% *********************
+\section{Uvod}
+\label{sec:Uvod}
+
+Uvodni del naloge ponavadi vsebuje:
+
+\begin{itemize}[nosep]
+	\item splošen pregled področja naloge,
+	\item osnovno literaturo področja naloge,
+	\item kaj bomo v nalogi naredili,
+	\item kako je naloga sestavljena.
+\end{itemize}
+
+Namen uvodnega dela je opisati ozadje diplomskega dela, kaj so glavna izhodišča in hipoteza. Nadaljujete s splošnim opisom pristopa reševanja naloge, kjer se sklicujete na vire, ki opisujejo določene postopke, rezultate, algoritme in podobno, iz katerih se boste navdihovali oziroma nadaljevali vaše raziskovalno delo v nalogi.
+
+Po uvodu pričnemo z opisom \textit{Materialov in metod}, ki jih v nalogi uporabimo. Nato nadaljujemo z naslednjim poglavjem \textit{Rezultati}, kjer opišemo rezultate, ki smo jih v okviru izdelave naloge pridobili. Nato zaključimo s poglavjem \textit{Diskusija}, kjer na kratko opišemo prednosti in slabosti našega diplomskega dela, recimo navzkrižno pokomentiramo rezultate, primerjamo uporabo različnih metod in podobno. Po želji dodamo lahko še poglavje \textit{Zaključek}, kjer opišemo zaključne misli na naše delo in kaj bi priporočali za naprej.
+
+
+% *********************
+% *** Novo poglavje ***
+% *********************
+\newpage
+\section{Materiali in metode}
+\label{sec:Materiali}
+
+V tem poglavju natančno opišete uporabljeno opremo in postopke dela z opremo. Mogoče v začetnem delu opišete teoretične osnovne principe, ki jih boste uporabljali. Recimo pri določanju upora ladje s pomočjo meritev modela v bazenu, se opiše Frudejev princip \cite{froude1888resistance}.
+
+% *** Podpoglavje ***
+\subsection{Opis trenja}
+
+S podpoglavjem opišemo ločene segmente, kot je recimo pri uporu ladje delitev na upora zaradi trenja in preostali upor. 
+
+
+% *********************
+% *** Novo poglavje ***
+% *********************
+\newpage
+\section{Rezultati}
+\label{sec:Rezultati}
+
+Rezultati vsebujejo vse kar ste izmerili izračunali in podobno, vaši lastni dosežki. Rezultate je treba pravilno predstaviti in natančno opisati. Iz osnovnih rezultatov lahko z dodatnim procesiranje pridobite nove, ki dodatno opišete, recimo v podpoglavju \textit{Obdelava podatkov}.
+
+% *** Podpoglavje ***
+\subsection{Obdelava podatkov}
+
+Tukaj opišem način obdelave podatkov in prikažem dobljene rezultate ter jih natančno opišem.
+
+
+% *********************
+% *** Novo poglavje ***
+% *********************
+\newpage
+\section{Diskusija in zaključek}
+\label{sec:Diskusija}
+
+V tem poglavju opravi z diskusijo opravljenega dela. Recimo opišem, če so bili kje neznani problemi, zakaj so rezultati taki kot so, ali je mogoče kakšno vidno odstopanje in opišete razmišljanje zakaj je tako in podobne stvari.
+
+V zaključku navedete na kratko, kaj je bilo narejeno in zaključite kaj bi lahko naredili bolje, kje vidite možnost nadaljevanja, uporabo drugih principov, kot so bili uporabljeni in podobno.
+
+
+
+% ******************
+% *** Literatura ***
+% ******************
+\vkljucibibliografijo{literatura}
+
+\end{document}
